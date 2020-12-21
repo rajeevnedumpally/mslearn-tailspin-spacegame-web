@@ -1,0 +1,11 @@
+
+name: example github actions
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world Job1!"
+      - uses: actions/checkout@v2
+      - run: ls -alt
+      - run: grep "Moq" hello.csproj
